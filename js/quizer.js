@@ -340,28 +340,640 @@ function load(){
 	setup();
 }
 
-// EN songs
+// RU songs
+const ru_1980_gr_icon = [
+	'ru_pop',
+	'ru_via',
+	'ru_rock_1',
+	'ru_rock_2'
+];
 
+const RU_1980_GR_PACK_1 = 1;
+const RU_1980_GR_PACK_2 = 2;
+const RU_1980_GR_PACK_3 = 3;
+const RU_1980_GR_PACK_4 = 4;
+
+let ru_1980_gr = [
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Ласковый май',
+		song : "Пусть будет ночь"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Браво',
+		song : "Жёлтые ботинки"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Форум',
+		song : "Островок"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Форум',
+		song : "Улетели листья"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Мираж',
+		song : "Солнечное лето"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Зодиак',
+		song : "Провинциальное диско"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Зодиак',
+		song : "Рок на льду"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Динамик',
+		song : "Ещё вчера"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Круг',
+		song : "Кара-кум"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Сёстры Базыкины',
+		song : "О чём ты думаешь"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Маленький принц',
+		song : "Мы встретимся снова"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Браво',
+		song : "Ленинградский рок-н-ролл"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Игра',
+		song : "Неспелая вишня"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Трио Меридиан',
+		song : "Прекрасное далёко"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Электроклуб',
+		song : "Тёмная лошадка"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Электроклуб',
+		song : "Кони в яблоках"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Электроклуб',
+		song : "Ты замуж за него не выходи"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Фристайл',
+		song : "Прощай навеки, последняя любовь"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Фристайл',
+		song : "Принцесса"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Любэ',
+		song : "Атас"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Любэ',
+		song : "Не губите, мужики"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Любэ',
+		song : "Клетки"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Сёстры Базыкины',
+		song : "Moscow Nights"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Весёлые ребята',
+		song : "Бродячие артисты"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Земляне',
+		song : "Трава у дома"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Земляне',
+		song : "Поверь в мечту"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Здравствуй, песня',
+		song : "Синий иней"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Верасы',
+		song : "Белый снег (Завируха)"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Верасы',
+		song : "Малиновка"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Сябры',
+		song : "Вы шумите, берёзы"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Синяя птица',
+		song : "Я иду тебе навстречу"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Пламя',
+		song : "Не повторяется такое никогда"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Пламя',
+		song : "Не надо печалиться"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Ариэль',
+		song : "На острове Буяне"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Ариэль',
+		song : "Каждый день твой"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Цветы',
+		song : "Мы желаем счастья вам"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Цветы',
+		song : "Богатырская сила"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Добры Молодцы',
+		song : "Песенка о снежинке"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Коробейники',
+		song : "Первый снег"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Красные маки',
+		song : "Если не расстанемся"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Лейся, песня',
+		song : "Я так и знал"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Весёлые ребята',
+		song : "Напиши мне письмо"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Весёлые ребята',
+		song : "Люди встречаются"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Земляне',
+		song : "Каскадёры"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Здравствуй, песня',
+		song : "Не обещай"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Здравствуй, песня',
+		song : "Птица счастья"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Верасы',
+		song : "Я у бабушки живу"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Синяя птица',
+		song : "Так вот какая ты"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Синяя птица',
+		song : "Белый теплоход"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Цветы',
+		song : "Звездочка моя ясная"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Пламя',
+		song : "Снег кружится"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Ариэль',
+		song : "В краю магнолий"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Ялла',
+		song : "Три колодца"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Ялла',
+		song : "Канатоходцы"
+	},
+	{
+		pack : RU_1980_GR_PACK_2,
+		group : 'ВИА Лейся, песня',
+		song : "Обручальное кольцо"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чайф',
+		song : "Вольный ветер"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чайф',
+		song : "Никто не услышит (Ой-йо)"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чайф',
+		song : "Всему своё время"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Круиз',
+		song : "Крутится волчок"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Круиз',
+		song : "Не позволяй душе лениться"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Круиз',
+		song : "Виза для Круиза"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чёрный кофе',
+		song : "Церквушки"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Алиса',
+		song : "Красное на чёрном"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Алиса',
+		song : "Моё поколение"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Алиса',
+		song : "Воздух"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Карнавал',
+		song : "Аэропорт"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Карнавал',
+		song : "Запасной игрок"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Альянс',
+		song : "На заре"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Альянс',
+		song : "Дайте огня"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Альянс',
+		song : "Фальстарт"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Автограф',
+		song : "Головокруженье"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Автограф',
+		song : "Ирландия. Ольстер"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Автограф',
+		song : "Корабль"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Воскресение',
+		song : "Кто виноват"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Воскресение',
+		song : "Воскресение"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Воскресение',
+		song : "Мчится поезд"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Секрет',
+		song : "Привет"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Секрет',
+		song : "Алиса"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Секрет',
+		song : "Ленинградское время"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Ария',
+		song : "Улица роз"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Ария',
+		song : "Позади Америка"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Ария',
+		song : "Воля и разум"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Аквариум',
+		song : "Поезд в огне"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Бригада С',
+		song : "Бродяга"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'ДДТ',
+		song : "Родина"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чёрный кофе',
+		song : "Чёрный кофе"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Чёрный кофе',
+		song : "Вольному воля"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Nautilus Pompilius',
+		song : "Гудбай, Америка"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Nautilus Pompilius',
+		song : "Я Хочу Быть С Тобой"
+	},
+	{
+		pack : RU_1980_GR_PACK_3,
+		group : 'Агата Кристи',
+		song : "Пантера"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Крематорий',
+		song : "Маленькая девочка"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Крематорий',
+		song : "Мусорный ветер"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Крематорий',
+		song : "Клубника со льдом"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Пикник',
+		song : "Иероглиф"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Пикник',
+		song : "Остров"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Пикник',
+		song : "Пикник"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Звуки Му',
+		song : "Бутылка водки"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Звуки Му',
+		song : "Серый голубь"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Звуки Му',
+		song : "Досуги-буги"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'АукцЫон',
+		song : "Нэпман"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'АукцЫон',
+		song : "Волчица"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'АукцЫон',
+		song : "Дорога"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Гражданская оборона',
+		song : "Всё идёт по плану"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Гражданская оборона',
+		song : "Зоопарк"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Гражданская оборона',
+		song : "На наших глазах"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Зоопарк',
+		song : "Буги-вуги каждый день"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Зоопарк',
+		song : "Пригородный блюз"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Зоопарк',
+		song : "Песня простого человека"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'ДК',
+		song : "Ветер перемен"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'ДК',
+		song : "Вот так вота!"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'ДК',
+		song : "Заберите вашу жизнь"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Рок-Ателье',
+		song : "Замыкая круг"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Анонс',
+		song : "Оля и СПИД"
+	},
+	{
+		pack : RU_1980_GR_PACK_1,
+		group : 'Анонс',
+		song : "Зина — продавец из магазина"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Центр',
+		song : "Навсегда"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Центр',
+		song : "Алексеев"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Центр',
+		song : "Тургеневские женщины"
+	},
+	{
+		pack : RU_1980_GR_PACK_4,
+		group : 'Чёрный Лукич',
+		song : "Мы идём в тишине (ft Егор Летов)"
+	}
+];
+
+let ru_1980_gr_1 =	ru_1980_gr.filter(item => item.pack == 1);
+let ru_1980_gr_2 =	ru_1980_gr.filter(item => item.pack == 2);
+let ru_1980_gr_3 =	ru_1980_gr.filter(item => item.pack == 3);
+let ru_1980_gr_4 =	ru_1980_gr.filter(item => item.pack == 4);
 
 
 let music = [
 	{
-		arr: en_2000_m,
-		lang: 'en',
-		year: '2000',
-		type: 'm',
+		arr: ru_1980_gr,
+		lang: 'ru',
+		year: '1980',
+		type: 'gr',
 		packs: [
 				{
-					arr: en_2000_m_1,
-					name: 'EN 2000s Male: Pop',
+					arr: ru_1980_gr_1,
+					name: 'RU 1980s Groups: Pop',
 				},
 				{
-					arr: en_2000_m_2,
-					name: 'EN 2000s Male: Dj',
+					arr: ru_1980_gr_2,
+					name: 'RU 1980s Groups: VIA',
 				},
 				{
-					arr: en_2000_m_3,
-					name: 'EN 2000s Male: Rap',
+					arr: ru_1980_gr_3,
+					name: 'RU 1980s Groups: Rock#1',
+				},
+				{
+					arr: ru_1980_gr_4,
+					name: 'RU 1980s Groups: Rock#2',
 				}
 			]
 	}
@@ -687,15 +1299,15 @@ let generateAudioPath;
 let generateImgPath;
 
 function setup(){
-	lang = 'en';
-	year = '2000';
-	artist_type = 'm';
+	lang = 'ru';
+	year = '1980';
+	artist_type = 'gr';
 	back = back_to_packages;
 	modeToggle = toggleArtist;
 	setMedia = setAudio;
 	rightAnswer = rightAnswer_RU;
 	count_time();
-	package_names = en_2000_gr_icon;
+	package_names = ru_1980_gr_icon;
 	show_packages(package_names.length);
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
