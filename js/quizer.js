@@ -363,7 +363,8 @@ let ru_1980_gr = [
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Браво',
-		song : "Жёлтые ботинки"
+		song : "Жёлтые ботинки",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
@@ -378,7 +379,8 @@ let ru_1980_gr = [
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Мираж',
-		song : "Солнечное лето"
+		song : "Солнечное лето",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
@@ -413,7 +415,8 @@ let ru_1980_gr = [
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Браво',
-		song : "Ленинградский рок-н-ролл"
+		song : "Ленинградский рок-н-ролл",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
@@ -453,17 +456,20 @@ let ru_1980_gr = [
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Любэ',
-		song : "Атас"
+		song : "Атас",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Любэ',
-		song : "Не губите, мужики"
+		song : "Не губите, мужики",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
 		group : 'Любэ',
-		song : "Клетки"
+		song : "Клетки",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_1,
@@ -778,7 +784,8 @@ let ru_1980_gr = [
 	{
 		pack : RU_1980_GR_PACK_3,
 		group : 'ДДТ',
-		song : "Родина"
+		song : "Родина",
+		ignore : true
 	},
 	{
 		pack : RU_1980_GR_PACK_3,
